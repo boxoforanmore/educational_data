@@ -1,7 +1,7 @@
 import React from 'react';
 import DonutChart from 'react-donut-chart';
 
-const race_ethnicity = [{
+export const race_ethnicity = [{
     'aian':                     'American Indian/Alaskan Native',
     'asian':                    'Asian',
     'asian_pacific_islander':   'Asian/Pacific Islander',
