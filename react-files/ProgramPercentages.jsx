@@ -62,7 +62,7 @@ export class ProgramPercentages extends React.Component {
             return (
                 <div>
                     <h3>Program Percentages:</h3>
-                    <DonutChart data={this.state.programs} />
+                    <DonutChart data={ this.state.programs } />
                 </div>
             );
         }
