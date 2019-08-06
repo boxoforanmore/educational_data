@@ -15,6 +15,23 @@ export class ProgramPercentages extends React.Component {
         return Number(str_num.slice(0, 4));
     }
 
+    toUpper(str) {
+        return (str.charAt(0).toUpperCase() + str.slice(1));
+    }
+
+    formatProgram(str) {
+        if (str.includes('_')) {
+            let new_str = [];
+            split_str = str.split('_')
+            for (i in split_str) {
+                new_str.push(this.toUpper(i));
+            }
+            return new_str.join(' ');
+        }
+
+        return this.toUpper(str);
+    }
+
     processData() {
         if (this.props.data) {
             let programs = [];
@@ -22,7 +39,7 @@ export class ProgramPercentages extends React.Component {
             for (key in this.props.data) {
                 if (data[key] != 0) {
                     programs.push({
-                        label: key,
+                        label: this.formatProgram(key),
                         value: this.trimNumber(data[key])
                     });
                 }

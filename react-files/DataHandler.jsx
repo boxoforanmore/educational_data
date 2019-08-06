@@ -18,11 +18,11 @@ export class DataHandler extends React.Component {
                     // Must pass enrollment and grad students for total student body size; docos say enrollment only covers undergrads
                     <SchoolData data={ this.props.data.results.school } 
                                 enrollment={ enrollment ? enrollment : 0} 
-                                grad_students={grad_students ? grad_students : 0}/>
+                                grad_students={grad_students ? grad_students : 0} />
 
-                    <ProgramPercentages data={ this.props.data.results.academics.program_percentage }/>
+                    <ProgramPercentages data={ this.props.data.results.latest.academics.program_percentage } />
 
-                    <RaceEthnicity />
+                    <RaceEthnicity data={ this.props.data.results.student.demographics.race_ethnicity } />
 
                     <OtherGraph />
 
