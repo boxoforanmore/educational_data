@@ -1,14 +1,14 @@
 var webpack = require('webpack');  
 module.exports = {  
   entry: [
-    "./js/app.js"
+    "./react-files/app.js"
   ],
   output: {
     path: __dirname + '/static',
     filename: "bundle.js"
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.(js|jsx)?$/,
         loader: 'babel-loader',
