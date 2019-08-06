@@ -1,0 +1,31 @@
+{
+  "name": "educationaldata",
+  "version": "0.0.1",
+  "description": "A simple React and Flask app to look at educational data",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack",
+    "start": "python app.py"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/boxoforanmore/educational_data.git"
+  },
+  "author": "Peter Nielson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/boxoforanmore/educational_data/issues"
+  },
+  "homepage": "https://github.com/boxoforanmore/educational_data#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "webpack": "^4.39.1",
+    "webpack-cli": "^3.3.6"
+  }
+}
