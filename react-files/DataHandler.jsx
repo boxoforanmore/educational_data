@@ -1,5 +1,6 @@
 import React from 'react';
 import { SchoolData } from './SchoolData.jsx';
+import { ProgramPercentages } from './ProgramPercentages.jsx';
 
 export class DataHandler extends React.Component {
     render() {
