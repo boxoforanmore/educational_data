@@ -2,6 +2,7 @@ import React from 'react';
 import { SchoolData } from './SchoolData.jsx';
 import { ProgramPercentages } from './ProgramPercentages.jsx';
 import { RaceEthnicity } from './RaceEthnicity.jsx';
+import { RaceEthnicityTime } from './RaceEthnicityTime.jsx';
 
 export class DataHandler extends React.Component {
     render() {
@@ -12,7 +13,7 @@ export class DataHandler extends React.Component {
         }
         else {
             let grad_students = this.props.data.resutls.latest.student.grad_students;
-            let enrollment = this.props.data.results.latest.student.size;
+            let enrollment = this.props.data.results.latest.student.enrollment.all;
 
             return (
                 <div>
@@ -25,7 +26,7 @@ export class DataHandler extends React.Component {
 
                     <RaceEthnicity data={ this.props.data.results.student.demographics.race_ethnicity } />
 
-                    <OtherGraph />
+                    <RaceEthnicityTime data={ this.props.data.results } />
 
                     <SaveAsPDF />
 
