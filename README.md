@@ -6,7 +6,7 @@
     * `Python (3.6.2+)`
     * `NPM`
 
-### For Lighweigt/Development Deployment ###
+### For Lighweight/Development Deployment ###
 1. (Optional) Virtual Environment
     * `python3 -m venv venv && source ./venv/bin/activate`
 2. Install required packages
