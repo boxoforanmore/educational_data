@@ -17,5 +17,6 @@
         * Add `--watch` flag for live updating during development
 4. Export api key as environmental variable
     * `export API_KEY='YOUR_KEY_HERE'`
+    * If you don't have an api key, sign up for one for free at [https://api.data.gov/](https://api.data.gov/)
 5. Run Flask to serve web app
     * `python3 app.py`
