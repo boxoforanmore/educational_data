@@ -2,13 +2,14 @@ import React from 'react';
 
 export class SchoolData extends React.Component {
     render() {
-        let schoolName = (this.props.name ? this.props.name : '(No school name provided)');
-        let schoolAlias = (this.props.alias ? (' (' + this.props.alias + ')') : '');
-        let schoolWebsite = (this.props.school_url ? this.props.school_url : '');
-        let schoolTag = (schoolWebsite ? (<a href={ schoolWebsite }>{ schoolWebsite }</a>) : 'No school website found');
-        let schoolCity = (this.props.city ? this.props.city : 'City Unknown');
-        let schoolState = (this.props.state ? this.props.state : 'State Unknown');
-        let schoolZip = (this.props.zip ? this.props.zip : 'Zipcode unknown');
+        alert("Aqui");
+        let schoolName = (this.props.data.name ? this.props.data.name : '(No school name provided)');
+        let schoolAlias = (this.props.data.alias ? (' (' + this.props.data.alias + ')') : '');
+        let schoolWebsite = (this.props.data.school_url ? this.props.data.school_url : '');
+        let schoolTag = (schoolWebsite ? (<a href={'https://' + schoolWebsite }>{ schoolWebsite }</a>) : 'No school website found');
+        let schoolCity = (this.props.data.city ? this.props.data.city : 'City Unknown');
+        let schoolState = (this.props.data.state ? this.props.data.state : 'State Unknown');
+        let schoolZip = (this.props.data.zip ? this.props.data.zip : 'Zipcode unknown');
         let total = this.props.enrollment + this.props.grad_students;
         let totalStudents = ((total != 0) ? total : 'Total number of students unknown');
 
@@ -25,6 +26,5 @@ export class SchoolData extends React.Component {
                 </ul>
             </div>
         );
-
     }
 }
