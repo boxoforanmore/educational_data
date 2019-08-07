@@ -85,9 +85,12 @@ export class ProgramPercentages extends React.Component {
 
     render() {
         return (
-            <DonutChartGrapher data={ this.state.data } 
-                               processed={ this.state.processed }
-                               processData={ this.processData } />
+            <div>
+                <h3>Program Percentages:</h3>
+                <DonutChartGrapher data={ this.state.data } 
+                                   processed={ this.state.processed }
+                                   processData={ this.processData } />
+            </div>
         );
     }
 }
