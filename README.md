@@ -15,5 +15,7 @@
 3. Build/Compile JSX for webapp
     * `npx webpack` or `webpack`
         * Add `--watch` flag for live updating during development
-4. Run Flask to serve web app
+4. Export api key as environmental variable
+    * `export API_KEY='YOUR_KEY_HERE'`
+5. Run Flask to serve web app
     * `python3 app.py`
