@@ -2,7 +2,6 @@ import React from 'react';
 
 export class SchoolData extends React.Component {
     render() {
-        alert("Aqui");
         let schoolName = (this.props.data.name ? this.props.data.name : '(No school name provided)');
         let schoolAlias = (this.props.data.alias ? (' (' + this.props.data.alias + ')') : '');
         let schoolWebsite = (this.props.data.school_url ? this.props.data.school_url : '');
