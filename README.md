@@ -6,7 +6,7 @@
     * `Python (3.6.2+)`
     * `NPM`
 
-### For Lighweigt/Development Deployment ###
+### For Lighweight/Development Deployment ###
 1. (Optional) Virtual Environment
     * `python3 -m venv venv && source ./venv/bin/activate`
 2. Install required packages
@@ -15,5 +15,8 @@
 3. Build/Compile JSX for webapp
     * `npx webpack` or `webpack`
         * Add `--watch` flag for live updating during development
-4. Run Flask to serve web app
+4. Export api key as an environmental variable
+    * `export API_KEY='YOUR_KEY_HERE'`
+    * If you don't have an api key, sign up for one for free at [https://api.data.gov/](https://api.data.gov/)
+5. Run Flask to serve web app
     * `python3 app.py`

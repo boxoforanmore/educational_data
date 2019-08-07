@@ -1,4 +1,6 @@
 var webpack = require('webpack');  
+var CompressionPlugin = require('compression-webpack-plugin');
+
 module.exports = {  
     entry: [
         "./react-files/app.jsx"
@@ -18,7 +20,13 @@ module.exports = {
             }
         ]
     },
-    plugins: []
+    plugins: [
+        new CompressionPlugin({
+            filename: '[path].gz[query]',
+            algorithm: 'gzip',
+            test: /\.(js|jsx)?$/,
+        })
+    ]
 };
 
 /*
