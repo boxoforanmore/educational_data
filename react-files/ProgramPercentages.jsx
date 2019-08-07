@@ -76,7 +76,7 @@ export class ProgramPercentages extends React.Component {
                 ]);
             }
         }
-        alert('outhere');
+        
         this.setState({
             data: programs,
             processed: true
