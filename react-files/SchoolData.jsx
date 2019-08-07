@@ -15,14 +15,22 @@ export class SchoolData extends React.Component {
 
         return (
             <div>
-                <h1>School Data Report for: <b>{ schoolName }</b>{ schoolAlias }</h1>
-                <h3>Website: { schoolTag }</h3>
-                <h3>{ schoolCity }, { schoolState }  {schoolZip}</h3>
-                <h3>Total Students: {totalStudents} </h3>
-                <ul>
-                    <li>Undergrads: { this.props.enrollment }</li>
-                    <li>Graduate Students { this.props.grad_students }</li>
-                </ul>
+                <h1> <b>{ schoolName }</b>{ schoolAlias }</h1>
+                <h3>School Data Report</h3>
+                <div style={{ border: '3px solid black' }}>
+                    <h4>Website: { schoolTag }</h4>
+                    <h4>Location: { schoolCity }, { schoolState }  { schoolZip }</h4>
+                    <div style={{ textAlign: 'center' }}>
+                        <div style={{ display: 'inline-block', textAlign: 'left' }}>
+                            <ul>
+                                <li><b>Undergraduate Students:</b> { this.props.enrollment }</li>
+                                <li><b>Graduate Students:</b> { this.props.grad_students }</li>
+                                <li><b>Total Students:</b> { totalStudents }</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <br />
             </div>
         );
     }
