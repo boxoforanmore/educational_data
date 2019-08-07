@@ -2,7 +2,7 @@ import React from 'react';
 import { SchoolData } from './SchoolData.jsx';
 import { ProgramPercentages } from './ProgramPercentages.jsx';
 import { RaceEthnicity } from './RaceEthnicity.jsx';
-//import { RaceEthnicityTime } from './RaceEthnicityTime.jsx';
+import { RaceEthnicityTime } from './RaceEthnicityTime.jsx';
 
 export class DataHandler extends React.Component {
     constructor(props) {
@@ -19,10 +19,23 @@ export class DataHandler extends React.Component {
                             enrollment={ enrollment ? enrollment : 0} 
                             grad_students={grad_students ? grad_students : 0} />
 
+                <br />
+                <br />
+                <br />
+
                 <ProgramPercentages data={ this.props.data.results[0]['latest']['academics']['program_percentage'] } />
+
+                <br />
+                <br />
+                <br />
 
                 <RaceEthnicity data={ this.props.data.results[0]['latest']['student']['demographics']['race_ethnicity'] } />
 
+                <br />
+                <br />
+                <br />
+                
+                <RaceEthnicityTime data={ this.props.data.results[0] } />
             </div>
         );
 
@@ -38,7 +51,6 @@ export class DataHandler extends React.Component {
 
                 <RaceEthnicity data={ this.props.data.results.student.demographics.race_ethnicity } />
 
-                <RaceEthnicityTime data={ this.props.data.results } />
             </div>
         );
         */
