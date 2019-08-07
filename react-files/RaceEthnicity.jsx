@@ -1,5 +1,4 @@
 import React from 'react';
-//import DonutChart from 'react-donut-chart';
 import { DonutChartGrapher } from './DonutChartGrapher.jsx';
 
 
