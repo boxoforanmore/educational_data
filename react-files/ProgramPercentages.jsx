@@ -66,19 +66,20 @@ export class ProgramPercentages extends React.Component {
     processData() {
         let programs = [];
         let data = this.props.data;
+        let num = null;
         
         for (var key in data) {
             if (( data[key] > 0 ) && (data[key] != null)) {
-                //alert(program_key[key] + ' ' + data[key]);
+                num = this.numberTrimmer((data[key] * 100))
                 programs.push([
-                    program_key[key],
-                    this.numberTrimmer((data[key] * 100))
+                    (program_key[key] + ' - ' + num),
+                    num
                 ]);
             }
         }
-        
+
         this.setState({
-            data: programs,
+            data: (programs.sort(function(a,b){return b[1]-a[1]})),
             processed: true
         });
     }
@@ -89,7 +90,9 @@ export class ProgramPercentages extends React.Component {
                 <h3>Program Percentages:</h3>
                 <DonutChartGrapher data={ this.state.data } 
                                    processed={ this.state.processed }
-                                   processData={ this.processData } />
+                                   processData={ this.processData }
+                                   position={ 'left' } 
+                                   name='Program Percentages' />
             </div>
         );
     }

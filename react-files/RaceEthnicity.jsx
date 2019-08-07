@@ -14,7 +14,8 @@ export const race_ethnicity = {
     'non_resident_alien':       'Non-Resident Alien',
     'two_or_more':              'Two or More Races',
     'unknown':                  'Unknown',
-    'white':                    'White'
+    'white':                    'White',
+    'white_non_hispanic':       'White (Non-Hispanic)'
 };
 
 
@@ -40,18 +41,22 @@ export class RaceEthnicity extends React.Component {
         let races = [];
         let data = this.props.data;
         let keys = Object.keys(race_ethnicity);
+        let num = null;
 
         for (var key in data) {
             if ((keys.includes(key)) && (data[key] > 0)) {
+
+                num = this.numberTrimmer((data[key] * 100));
+
                 races.push([
-                    race_ethnicity[key],
-                    this.numberTrimmer((data[key] * 100))
+                    (race_ethnicity[key] + ' - ' + num),
+                    num
                 ]);
             }
         }
 
         this.setState({
-            data: races,
+            data: (races.sort(function(a,b){return b[1]-a[1]})),
             processed: true
         });
     }
@@ -62,7 +67,9 @@ export class RaceEthnicity extends React.Component {
                 <h3>Race and Ethnicity:</h3>
                 <DonutChartGrapher data={ this.state.data } 
                                    processed={ this.state.processed }
-                                   processData={ this.processData } />
+                                   processData={ this.processData }
+                                   positionn='right'
+                                   name='Latest Race/Ethnicity Report' />
             </div>
         );
     }
