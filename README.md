@@ -1,4 +1,8 @@
 # Educational Data #
+This simple web application makes a call to an API (link below) and displays the information for a school (University of Madison Wisconsin, in this case).
+
+Some simple graphs are included, specifically donut graphs for the program enrollment percentages and the race/ethnicity demographic breakdown, as well as a time series line graph showing demographic reporting stats since the data was collected (this one seems to hold some interesting trends and naming swaps).
+
 
 
 ## To Run ##
