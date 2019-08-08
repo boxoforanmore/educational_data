@@ -16,10 +16,21 @@ export class DataHandler extends React.Component {
         super(props);
 
         this.printPage = this.printPage.bind(this);
+        this.saveJSON = this.saveJSON.bind(this);
     }
 
     printPage() {
         window.print();
+    }
+
+    saveJSON() {
+        const element = document.getElementById('downloadElement');
+        const text = 'data:text/json;charset=utf-8,' + encodeURIComponent(JSON.stringify(this.props.data));
+        const filename = 'school_data_id_' + this.props.data.results[0]['id'] + '.json';
+
+        element.setAttribute('href', text);
+        element.setAttribute('download', filename);
+        element.click();
     }
 
     render() {
@@ -28,6 +39,8 @@ export class DataHandler extends React.Component {
         return (
             <div style={styling}>
                 <button class="hide" onClick={ this.printPage }>Print this page</button>
+                <button class="hide" id="download" onClick={ this.saveJSON }>Download this Data (JSON)</button>
+                <a id="downloadElement" style={{ display: 'none' }}></a>
                 {/* Must pass enrollment and grad students for total student body size; docos say enrollment only covers undergrads */}
                 <SchoolData data={ this.props.data.results[0]['school'] } 
                             enrollment={ enrollment ? enrollment : 0} 
@@ -43,7 +56,7 @@ export class DataHandler extends React.Component {
                 <br />
                 <br />
                 <br />
-                <div class='show' style={{ display: 'hide' }}>
+                <div class='show'>
                     <br />
                     <br />
                     <br />
@@ -65,6 +78,8 @@ export class DataHandler extends React.Component {
                 <br />
                 
                 <RaceEthnicityTime data={ this.props.data.results[0] } />
+
+                <p style={{ color: '#A0A0A0', fontSize: '50%'}}>Data retrieved from <a href="https://api.data.gov">https://api.data.gov</a></p>
 
             </div>
         );
