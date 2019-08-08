@@ -18,7 +18,7 @@
     "url": "https://github.com/boxoforanmore/educational_data/issues"
   },
   "homepage": "https://github.com/boxoforanmore/educational_data#readme",
-  "devDependencies": {
+  "dependencies": {
     "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/plugin-proposal-class-properties": "^7.5.5",
