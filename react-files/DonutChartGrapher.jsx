@@ -44,27 +44,34 @@ export class DonutChartGrapher extends React.Component {
             let colors = this.makeGradient();
             if (isMobile) {
                 return (
-                    <PieChart donut={ true }
-                              data={ this.props.data }
-                              suffix="%"
-                              width='98%'
-                              height='400px'
-                              legend={ this.props.position }
-                              name={ this.props.name }
-                              colors={ this.makeGradient() } />
+                    <div style={{ marginLeft: '5%', marginRight: '5%' }} >
+                        <PieChart donut={ true }
+                                  data={ this.props.data }
+                                  suffix="%"
+                                  width='90%'
+                                  height='600px'
+                                  legend={ this.props.position }
+                                  name={ this.props.name }
+                                  colors={ this.makeGradient() } 
+                                  download={{background: "#fff"}} 
+                                  />
+                    </div>
                 );
             }
             else {
                 return (
-                    <PieChart donut={ true } 
-                              data={ this.props.data } 
-                              suffix="%" 
-                              width='98%'
-                              height='500px'
-                              legend={ this.props.position }
-                              name={ this.props.name }
-                              colors={ this.makeGradient() }
-                              />
+                    <div style={{ marginLeft: '5%', marginRight: '5%' }} >
+                        <PieChart donut={ true } 
+                                  data={ this.props.data } 
+                                  suffix="%" 
+                                  width='90%'
+                                  height='600px'
+                                  legend={ this.props.position }
+                                  name={ this.props.name }
+                                  colors={ this.makeGradient() }
+                                  download={{background: "#fff"}}
+                                />
+                    </div>
                 );
             }
         }

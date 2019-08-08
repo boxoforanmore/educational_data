@@ -3,11 +3,27 @@
 <head>
     <title>Educational Data</title>
 
-    <style>
+    <style media="screen">
         body {
             font-family: "Arial";
         }
+
+        .show {
+            display: none;
+        }
     </style>
+    <style media="print">
+        .hide {
+            display: none;   
+        }
+
+        .show {
+            display: block;
+        }
+
+    </style>
+
+
 <head>
 
 <body>
@@ -17,6 +33,11 @@
     <!-- For the compiled JS/React components -->
     <script type="text/javascript">
         const API_KEY = '{{ API_KEY }}';
+
+        function printPage() {
+            const toprint = document.getElementById('app');
+            toprint.print();
+        }
     </script>
     <script type="text/javascript" src="{{ url_for('static', filename='bundle.js') }}"></script>
 </body>

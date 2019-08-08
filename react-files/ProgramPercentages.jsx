@@ -73,7 +73,7 @@ export class ProgramPercentages extends React.Component {
             if (( data[key] > 0 ) && (data[key] != null)) {
                 num = this.numberTrimmer((data[key] * 100))
                 programs.push([
-                    (program_key[key] + ' - ' + num),
+                    (program_key[key] + ' - ' + num + '%'),
                     num
                 ]);
             }
