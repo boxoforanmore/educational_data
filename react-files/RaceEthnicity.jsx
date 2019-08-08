@@ -48,7 +48,7 @@ export class RaceEthnicity extends React.Component {
                 num = this.numberTrimmer((data[key] * 100));
 
                 races.push([
-                    (race_ethnicity[key] + ' - ' + num),
+                    (race_ethnicity[key] + ' - ' + num + '%'),
                     num
                 ]);
             }

@@ -25,7 +25,7 @@ export class SeriesDataGrapher extends React.Component {
                         <LineChart data={ this.props.data }
                                    suffix='%'
                                    width='90%'
-                                   height='550px'
+                                   height='525px'
                                    legend='top'
                                    min='0'
                                    max='100'
@@ -43,7 +43,7 @@ export class SeriesDataGrapher extends React.Component {
                         <LineChart data={ this.props.data }
                                    suffix='%'
                                    width='95%'
-                                   height='550px'
+                                   height='525px'
                                    legend='left'
                                    min='0'
                                    max='100'
