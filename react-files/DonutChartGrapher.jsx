@@ -60,10 +60,11 @@ export class DonutChartGrapher extends React.Component {
                               data={ this.props.data } 
                               suffix="%" 
                               width='98%'
-                              height='500px'
+                              height='800px'
                               legend={ this.props.position }
                               name={ this.props.name }
                               colors={ this.makeGradient() }
+                              download={ this.props.name + '.png' }
                               />
                 );
             }
