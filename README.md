@@ -22,4 +22,4 @@
     * `python3 app.py`
 6. Head to `localhost:5000` in a browser (Chrome and Firefox recommended)
 
-*Note: Saving the charts to a single, concise pdf proved difficult without a headless chrome instance, so the only way to download as a pdf currently is through printing to pdf*
+*Note: Saving the charts to a single, concise pdf proved difficult without a headless chrome instance, so the only way currently to download as a pdf is through printing to a pdf in the browser*
