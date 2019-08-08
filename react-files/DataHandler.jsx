@@ -5,8 +5,8 @@ import { RaceEthnicity } from './RaceEthnicity.jsx';
 import { RaceEthnicityTime } from './RaceEthnicityTime.jsx';
 
 const styling = {
-    marginLeft: '10px',
-    marginRight: '10px',
+    marginLeft: '5%',
+    marginRight: '5%',
     textAlign: 'center',
     fontFamily: 'Arial'
 };
@@ -14,6 +14,12 @@ const styling = {
 export class DataHandler extends React.Component {
     constructor(props) {
         super(props);
+
+        this.printPage = this.printPage.bind(this);
+    }
+
+    printPage() {
+        window.print();
     }
 
     render() {
@@ -21,11 +27,13 @@ export class DataHandler extends React.Component {
         let enrollment = this.props.data.results[0]['latest']['student']['enrollment']['all'];//.latest.student.enrollment.all;
         return (
             <div style={styling}>
+                <button class="hide" onClick={ this.printPage }>Print this page</button>
                 {/* Must pass enrollment and grad students for total student body size; docos say enrollment only covers undergrads */}
                 <SchoolData data={ this.props.data.results[0]['school'] } 
                             enrollment={ enrollment ? enrollment : 0} 
                             grad_students={grad_students ? grad_students : 0} />
 
+                <br />
                 <br />
                 <br />
                 <br />
@@ -35,6 +43,20 @@ export class DataHandler extends React.Component {
                 <br />
                 <br />
                 <br />
+                <div class='show' style={{ display: 'hide' }}>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                </div>
 
                 <RaceEthnicity data={ this.props.data.results[0]['latest']['student']['demographics']['race_ethnicity'] } />
 
@@ -43,6 +65,7 @@ export class DataHandler extends React.Component {
                 <br />
                 
                 <RaceEthnicityTime data={ this.props.data.results[0] } />
+
             </div>
         );
     }

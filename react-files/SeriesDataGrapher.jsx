@@ -21,30 +21,38 @@ export class SeriesDataGrapher extends React.Component {
             if (isMobile) {
                 alert('mobile render');
                 return (
-                    <LineChart data={ this.props.data }
-                               suffix='%'
-                               width='90%'
-                               height='600px'
-                               legend='top'
-                               min='0'
-                               max='100'
-                               xtitle='Year'
-                               ytitle='Percent Enrolled'
-                               name={ this.props.name } />
+                    <div style={{ marginLeft: '5%', marginRight: '5%' }} >
+                        <LineChart data={ this.props.data }
+                                   suffix='%'
+                                   width='90%'
+                                   height='550px'
+                                   legend='top'
+                                   min='0'
+                                   max='100'
+                                   xtitle='Year'
+                                   ytitle='Percent Enrolled'
+                                   name={ this.props.name } 
+                                   download={{background: "#fff"}}
+                                   />
+                    </div>
                 );
             }
             else {
                 return (
-                    <LineChart data={ this.props.data }
-                               suffix='%'
-                               width='95%'
-                               height='600px'
-                               legend='left'
-                               min='0'
-                               max='100'
-                               xtitle='Year'
-                               ytitle='Percent Enrolled'
-                               name={ this.props.name } />
+                    <div style={{ marginLeft: '5%', marginRight: '5%' }} >
+                        <LineChart data={ this.props.data }
+                                   suffix='%'
+                                   width='95%'
+                                   height='550px'
+                                   legend='left'
+                                   min='0'
+                                   max='100'
+                                   xtitle='Year'
+                                   ytitle='Percent Enrolled'
+                                   name={ this.props.name } 
+                                   download={{background: "#fff"}}
+                                   />
+                    </div>
                 );
             }
         }
